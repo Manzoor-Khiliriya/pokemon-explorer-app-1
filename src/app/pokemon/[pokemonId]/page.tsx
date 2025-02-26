@@ -4,7 +4,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 interface PokemonDetailPageProps {
-  params: { pokemonId: string };
+  params: {
+    pokemonId: string;
+  };
 }
 
 export default async function PokemonDetail({ params }: PokemonDetailPageProps) {
