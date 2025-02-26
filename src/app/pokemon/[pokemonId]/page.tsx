@@ -3,7 +3,7 @@ import { fetchPokemonDetails } from "@/utils/api";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-export default async function PokemonDetail({ params }: any) {
+export default async function PokemonDetail(params : any) {
   const { pokemonId } = params;
   if (!pokemonId) return notFound();
 
