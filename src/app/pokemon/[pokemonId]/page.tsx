@@ -3,8 +3,8 @@ import { fetchPokemonDetails } from "@/utils/api";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-export default async function PokemonDetail(params : any) {
-  const { pokemonId } = params;
+export default async function PokemonDetail(props : any) {
+  const { pokemonId } = props.params;
   if (!pokemonId) return notFound();
 
   const pokemon = await fetchPokemonDetails(pokemonId);
